@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c458a;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.logo-container {
+  padding: 0.5rem;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Nata Sans", sans-serif;
+  color: whitesmoke;
+}
+
+.menu-container {
+  display: flex;
+  background-color: #00acea;
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+
+.menu {
+  height: 1.8rem;
+}
