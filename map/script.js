@@ -16,7 +16,6 @@ const highlightCountries = {
   IN: { name: "India", url: "https://en.wikipedia.org/wiki/India" },
 };
 
-
 window.addEventListener("DOMContentLoaded", () => {
   const svg = document.querySelector("svg");
   const mapDiv = document.querySelector(".map");

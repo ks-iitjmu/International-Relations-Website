@@ -1,62 +1,61 @@
 svg path {
-	transition: fill;
+  transition: fill;
 }
 
 body {
-	margin: 0;
-	background: #0c458c;
+  margin: 0;
+  background: #0c458c;
 }
 
 .map-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
 .map {
-	max-width: 800px;
-	margin: 48px auto;
-	border-radius: 18px;
-	box-shadow: 0 2px 16px 0 rgba(60, 120, 180, 0.10);
-	width: 90vw;
-	min-width: 320px;
-	min-height: 320px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: visible;
-	position: relative;
-	cursor: crosshair;
+  max-width: 800px;
+  margin: 48px auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(60, 120, 180, 0.1);
+  width: 90vw;
+  min-width: 320px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  cursor: crosshair;
 }
 
 .map.zooming {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .map svg {
-	width: 100%;
-	height: auto;
-	background: #d0f1ff;
-	border-radius: 14px;
-	box-shadow: 0 1px 6px 0 rgba(60, 120, 180, 0.07);
-	display: block;
-	max-height: 70vh;
-	transition: none;
+  width: 100%;
+  height: auto;
+  background: #d0f1ff;
+  border-radius: 14px;
+  box-shadow: 0 1px 6px 0 rgba(60, 120, 180, 0.07);
+  display: block;
+  max-height: 70vh;
+  transition: none;
 }
 
 .map.zooming svg {
-	transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (max-width: 600px) {
-	.map {
-		padding: 6px;
-		border-radius: 10px;
-	}
+  .map {
+    padding: 6px;
+    border-radius: 10px;
+  }
 
-	.map svg {
-		border-radius: 8px;
-	}
+  .map svg {
+    border-radius: 8px;
+  }
 }
