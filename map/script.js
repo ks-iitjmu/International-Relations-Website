@@ -16,16 +16,17 @@ const highlightCountries = {
   IN: { name: "India", url: "https://en.wikipedia.org/wiki/India" },
 };
 
+
 window.addEventListener("DOMContentLoaded", () => {
   const svg = document.querySelector("svg");
-  if (!svg) return;
+  const mapDiv = document.querySelector(".map");
+  if (!svg || !mapDiv) return;
   svg.querySelectorAll("path[id]").forEach((path) => {
     path.style.fill = "#9b9b9bff";
     path.style.transition = "fill 0.2s";
     path.style.cursor = "default";
   });
 
-  // Tooltip element
   const tooltip = document.createElement("div");
   tooltip.style.position = "fixed";
   tooltip.style.pointerEvents = "none";
@@ -61,5 +62,38 @@ window.addEventListener("DOMContentLoaded", () => {
         window.open(url, "_blank");
       });
     }
+  });
+
+  let zoomLevel = 2.2;
+  let isZooming = false;
+
+  function setZooming(active) {
+    isZooming = active;
+    if (active) {
+      mapDiv.classList.add("zooming");
+    } else {
+      mapDiv.classList.remove("zooming");
+      svg.style.transform = "scale(1)";
+      svg.style.transformOrigin = "50% 50%";
+    }
+  }
+
+  svg.style.transform = "scale(1)";
+  svg.style.transformOrigin = "50% 50%";
+
+  mapDiv.addEventListener("mouseenter", (e) => setZooming(true));
+  mapDiv.addEventListener("mouseleave", (e) => setZooming(false));
+
+  mapDiv.addEventListener("mousemove", (e) => {
+    if (!isZooming) return;
+    const rect = mapDiv.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const percentX = x / rect.width;
+    const percentY = y / rect.height;
+    const originX = percentX * 100;
+    const originY = percentY * 100;
+    svg.style.transformOrigin = `${originX}% ${originY}%`;
+    svg.style.transform = `scale(${zoomLevel})`;
   });
 });

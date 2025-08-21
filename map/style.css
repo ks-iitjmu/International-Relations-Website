@@ -14,6 +14,7 @@ body {
 	height: 100vh;
 }
 
+
 .map {
 	max-width: 800px;
 	margin: 48px auto;
@@ -21,10 +22,17 @@ body {
 	box-shadow: 0 2px 16px 0 rgba(60, 120, 180, 0.10);
 	width: 90vw;
 	min-width: 320px;
-	aspect-ratio: 16/9;
+	min-height: 320px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: visible;
+	position: relative;
+	cursor: crosshair;
+}
+
+.map.zooming {
+	overflow: hidden;
 }
 
 .map svg {
@@ -35,6 +43,11 @@ body {
 	box-shadow: 0 1px 6px 0 rgba(60, 120, 180, 0.07);
 	display: block;
 	max-height: 70vh;
+	transition: none;
+}
+
+.map.zooming svg {
+	transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (max-width: 600px) {
