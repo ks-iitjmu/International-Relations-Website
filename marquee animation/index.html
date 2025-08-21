@@ -3,15 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="flag-marquee-container">
       <div class="flag-marquee">
-        <span class="flags"> 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 </span>
-        <span class="flags"> 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 </span>
+        <span class="flags">
+          🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦
+          🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳
+        </span>
+        <span class="flags">
+          🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦
+          🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳
+        </span>
       </div>
     </div>
+    <style>
+      .flag-marquee-container {
+        width: 100vw;
+        min-height: 3.5rem;
+        overflow: hidden;
+        background: #fff;
+        border-top: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+        margin: 20px 0;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+      }
+      .flag-marquee {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 2.2rem;
+        height: 3.5rem;
+        animation: marquee 45s linear infinite;
+        will-change: transform;
+      }
+      .flags {
+        display: inline-block;
+        white-space: nowrap;
+        padding-right: 2rem;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+    <script>
+      const flagSequence = "🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 ";
+      function fillFlags() {
+        const marquee = document.querySelector(".flag-marquee");
+        if (!marquee) return;
+        const spans = marquee.querySelectorAll(".flags");
+        spans.forEach((span) => {
+          let repeated = "";
+          const temp = document.createElement("span");
+          temp.style.visibility = "hidden";
+          temp.style.position = "absolute";
+          temp.style.whiteSpace = "nowrap";
+          document.body.appendChild(temp);
+          let count = 0;
+          while (true) {
+            temp.textContent = repeated + flagSequence;
+            if (temp.offsetWidth > window.innerWidth * 2) break;
+            repeated += flagSequence;
+            count++;
+            if (count > 100) break;
+          }
+          span.textContent = repeated.trim();
+          document.body.removeChild(temp);
+        });
+      }
+      window.addEventListener("DOMContentLoaded", fillFlags);
+      window.addEventListener("resize", fillFlags);
+    </script>
   </body>
 </html>
