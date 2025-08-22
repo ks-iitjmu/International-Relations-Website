@@ -1,13 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MOU — Accordion</title>
+  </head>
+  <body>
+    <main class="page">
+      <section class="accordion" aria-label="MOU sections">
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-1"
+              id="accordion-1"
+            >
+              <span class="label">BRAZIL</span>
+              <span class="right"
+                ><img class="flag" src="svg/brazil.svg" alt="Brazil flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-1"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-1"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of São Paulo</td>
+                    <td>Faculty of Sciences</td>
+                    <td>2018-07-22</td>
+                    <td>Research collaboration</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-2"
+              id="accordion-2"
+            >
+              <span class="label">CANADA</span>
+              <span class="right"
+                ><img class="flag" src="svg/canada.svg" alt="Canada flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-2"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-2"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Toronto</td>
+                    <td>Faculty of Engineering</td>
+                    <td>2020-03-03</td>
+                    <td>Student exchange</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-3"
+              id="accordion-3"
+            >
+              <span class="label">ENGLAND</span>
+              <span class="right"
+                ><img class="flag" src="svg/england.svg" alt="England flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-3"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-3"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Oxford</td>
+                    <td>Institute for Global Affairs</td>
+                    <td>2020-11-05</td>
+                    <td>Faculty exchange</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-4"
+              id="accordion-4"
+            >
+              <span class="label">FINLAND</span>
+              <span class="right"
+                ><img class="flag" src="svg/finland.svg" alt="Finland flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-4"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-4"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Helsinki</td>
+                    <td>Dept. of Social Sciences</td>
+                    <td>2020-02-14</td>
+                    <td>Student mobility</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-5"
+              id="accordion-5"
+            >
+              <span class="label">FRANCE</span>
+              <span class="right"
+                ><img class="flag" src="svg/france.svg" alt="France flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-5"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-5"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sorbonne University</td>
+                    <td>Faculty of Arts</td>
+                    <td>2019-09-20</td>
+                    <td>Joint seminars</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-6"
+              id="accordion-6"
+            >
+              <span class="label">GERMANY</span>
+              <span class="right"
+                ><img class="flag" src="svg/germany.svg" alt="Germany flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-6"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-6"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Technical University of Munich</td>
+                    <td>School of Engineering</td>
+                    <td>2021-05-12</td>
+                    <td>Research collaboration</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-7"
+              id="accordion-7"
+            >
+              <span class="label">ITALY</span>
+              <span class="right"
+                ><img class="flag" src="svg/italy.svg" alt="Italy flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-7"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-7"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Bologna</td>
+                    <td>Dept. of Humanities</td>
+                    <td>2017-10-10</td>
+                    <td>Curriculum exchange</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-8"
+              id="accordion-8"
+            >
+              <span class="label">JAPAN</span>
+              <span class="right"
+                ><img class="flag" src="svg/japan.svg" alt="Japan flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-8"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-8"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Tokyo</td>
+                    <td>Dept. of International Studies</td>
+                    <td>2022-09-01</td>
+                    <td>Student exchange</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-9"
+              id="accordion-9"
+            >
+              <span class="label">NORWAY</span>
+              <span class="right"
+                ><img class="flag" src="svg/norway.svg" alt="Norway flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-9"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-9"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>University of Oslo</td>
+                    <td>Dept. of Political Science</td>
+                    <td>2016-01-15</td>
+                    <td>Policy research</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-10"
+              id="accordion-10"
+            >
+              <span class="label">TAIWAN</span>
+              <span class="right"
+                ><img class="flag" src="svg/taiwan.svg" alt="Taiwan flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-10"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-10"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>National Taiwan University</td>
+                    <td>College of Science</td>
+                    <td>2021-12-01</td>
+                    <td>Research exchanges</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <div
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="panel-11"
+              id="accordion-11"
+            >
+              <span class="label">USA</span>
+              <span class="right"
+                ><img class="flag" src="svg/us.svg" alt="USA flag"
+              /></span>
+            </div>
+          </h3>
+          <div
+            id="panel-11"
+            class="accordion-panel"
+            role="region"
+            aria-labelledby="accordion-11"
+          >
+            <div class="table-wrap">
+              <table class="accordion-table">
+                <thead>
+                  <tr>
+                    <th>Partner</th>
+                    <th>Institution</th>
+                    <th>Start Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MIT</td>
+                    <td>School of Engineering</td>
+                    <td>2021-06-10</td>
+                    <td>Joint workshops</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

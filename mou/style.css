@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
+
+:root {
+  --accent: #0b6cf0;
+  --muted: #666;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial;
+  line-height: 1.5;
+  color: #111;
+  margin: 0;
+  padding: 32px;
+  background: linear-gradient(180deg, #f6f8fb 0%, #ffffff 100%);
+}
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-header h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  color: #0f1724;
+}
+.lead {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.accordion {
+  display: block;
+}
+.accordion-item {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  border-bottom: 1px solid #000;
+}
+.accordion-trigger {
+  font-family: "Boldonse", system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  background: transparent;
+  border: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #0f1724;
+  cursor: pointer;
+  line-height: 1;
+}
+.accordion-trigger:focus {
+  outline: 3px solid rgba(11, 108, 240, 0.14);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.accordion-trigger .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  padding: 0 18px 0 16px;
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+  margin-bottom: 0;
+  margin-right: 3rem;
+}
+.accordion-trigger .flag {
+  width: 2.2em;
+  height: 2.2em;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+.accordion-trigger .label {
+  flex: 1;
+}
+.accordion-panel {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s cubic-bezier(0.2, 0.9, 0.2, 1), padding 0.18s;
+}
+.accordion-panel.open {
+  padding: 14px 20px 18px 20px;
+  overflow: auto;
+}
+.accordion-panel p {
+  margin: 0;
+  color: #374151;
+}
+.accordion-trigger[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .page {
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+  .accordion-trigger {
+    font-size: 2.1rem;
+    padding: 12px 10px;
+  }
+  .accordion-trigger .right {
+    margin-right: 1rem;
+    padding: 0 10px 0 8px;
+  }
+  .accordion-trigger .flag {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  .accordion-panel.open {
+    padding: 10px 10px 12px 10px;
+  }
+  .accordion-table thead th,
+  .accordion-table tbody th,
+  .accordion-table td {
+    padding: 6px 6px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+  .page-header h1 {
+    font-size: 1.1rem;
+  }
+  .accordion-trigger {
+    font-size: 1.2rem;
+    padding: 8px 6px;
+  }
+  .accordion-trigger .right {
+    margin-right: 0.5rem;
+    padding: 0 6px 0 4px;
+    font-size: 0.9rem;
+  }
+  .accordion-trigger .flag {
+    width: 1.2em;
+    height: 1.2em;
+  }
+  .accordion-panel.open {
+    padding: 7px 6px 8px 6px;
+  }
+  .accordion-table {
+    font-size: 0.85rem;
+    min-width: 400px;
+  }
+  .accordion-table thead th,
+  .accordion-table tbody th,
+  .accordion-table td {
+    padding: 4px 4px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+.accordion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0;
+  font-size: 0.98rem;
+}
+.accordion-table thead th {
+  font-weight: 700;
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.accordion-table tbody th {
+  width: 28%;
+  padding: 8px 10px;
+  vertical-align: top;
+  color: #111;
+  font-weight: 600;
+}
+.accordion-table td {
+  padding: 8px 10px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+  vertical-align: top;
+  color: #374151;
+}
+.accordion-table tr:last-child td,
+.accordion-table tr:last-child th {
+  border-bottom: 0;
+}
