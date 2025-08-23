@@ -1,35 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const triggers = Array.from(document.querySelectorAll(".accordion-trigger"));
-  function closeAllExcept(openTrigger) {
-    triggers.forEach((t) => {
-      if (t !== openTrigger) {
-        t.setAttribute("aria-expanded", "false");
-        const panel = document.getElementById(t.getAttribute("aria-controls"));
-        panel.style.maxHeight = null;
-        panel.classList.remove("open");
+  const accordionItems = document.querySelectorAll(".accordion-item");
+
+  accordionItems.forEach((item) => {
+    const button = item.querySelector(".accordion-button");
+    const content = item.querySelector(".accordion-content");
+
+    button.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      accordionItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          otherItem
+            .querySelector(".accordion-content")
+            .classList.remove("active");
+        }
+      });
+
+      if (!isActive) {
+        item.classList.add("active");
+        content.classList.add("active");
+      } else {
+        item.classList.remove("active");
+        content.classList.remove("active");
       }
     });
-  }
-  function toggle(trigger) {
-    const expanded = trigger.getAttribute("aria-expanded") === "true";
-    if (expanded) {
-      trigger.setAttribute("aria-expanded", "false");
-      const panel = document.getElementById(
-        trigger.getAttribute("aria-controls")
-      );
-      panel.style.maxHeight = null;
-      panel.classList.remove("open");
-    } else {
-      closeAllExcept(trigger);
-      trigger.setAttribute("aria-expanded", "true");
-      const panel = document.getElementById(
-        trigger.getAttribute("aria-controls")
-      );
-      panel.classList.add("open");
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  }
-  triggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => toggle(trigger));
+
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        button.click();
+      }
+    });
   });
 });

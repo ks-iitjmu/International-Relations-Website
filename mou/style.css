@@ -1,205 +1,295 @@
-@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
-
-:root {
-  --accent: #0b6cf0;
-  --muted: #666;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
-    "Helvetica Neue", Arial;
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #000000;
   line-height: 1.5;
-  color: #111;
-  margin: 0;
-  padding: 32px;
-  background: linear-gradient(180deg, #f6f8fb 0%, #ffffff 100%);
+  padding: 40px 20px;
 }
-.page {
-  max-width: 1200px;
+
+.container {
+  max-width: 900px;
   margin: 0 auto;
 }
-.page-header h1 {
-  margin: 0 0 6px;
-  font-size: 1.6rem;
-  color: #0f1724;
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
 }
-.lead {
-  color: var(--muted);
-  margin: 0 0 20px;
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .accordion {
-  display: block;
-}
-.accordion-item {
-  background: #fff;
+  background: #ffffff;
   border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
-  border-bottom: 1px solid #000;
-}
-.accordion-trigger {
-  font-family: "Boldonse", system-ui;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 16px 20px;
-  background: transparent;
-  border: 0;
-  font-size: 3rem;
-  font-weight: 600;
-  color: #0f1724;
-  cursor: pointer;
-  line-height: 1;
-}
-.accordion-trigger:focus {
-  outline: 3px solid rgba(11, 108, 240, 0.14);
-  outline-offset: 2px;
-  border-radius: 6px;
+  overflow: hidden;
 }
 
-.accordion-trigger .right {
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item:hover {
+  background: #fafafa;
+}
+
+.accordion-item.active {
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+}
+
+.accordion-item.active:last-child {
+  border-bottom: 1px solid #000000;
+}
+
+.accordion-button {
+  display: block;
+  width: 100%;
+  padding: 24px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-button:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.button-content {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: #000;
-  color: #fff;
-  padding: 0 18px 0 16px;
-  border-radius: 0 8px 8px 0;
-  height: 100%;
-  margin-bottom: 0;
-  margin-right: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
-.accordion-trigger .flag {
-  width: 2.2em;
-  height: 2.2em;
-  display: block;
-  object-fit: contain;
-  margin-bottom: 0;
-}
-.accordion-trigger .label {
+
+.country-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   flex: 1;
+  text-align: left;
+  position: relative;
+  z-index: 3;
 }
-.accordion-panel {
-  padding: 0 20px;
+
+.country-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.accordion-item:hover .country-flag {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.32s cubic-bezier(0.2, 0.9, 0.2, 1), padding 0.18s;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #f8f8f8;
 }
-.accordion-panel.open {
-  padding: 14px 20px 18px 20px;
+
+.accordion-content.active {
+  /* allow taller content and enable internal scrolling for long tables */
+  max-height: 1000px;
+  padding: 30px 0;
   overflow: auto;
 }
-.accordion-panel p {
-  margin: 0;
-  color: #374151;
-}
-.accordion-trigger[aria-expanded="true"] .chev {
-  transform: rotate(180deg);
-  color: var(--accent);
+
+.content-inner {
+  padding: 0;
 }
 
-@media (max-width: 900px) {
-  .page {
-    max-width: 98vw;
-    padding: 0 8px;
-  }
-  .accordion-trigger {
-    font-size: 2.1rem;
-    padding: 12px 10px;
-  }
-  .accordion-trigger .right {
-    margin-right: 1rem;
-    padding: 0 10px 0 8px;
-  }
-  .accordion-trigger .flag {
-    width: 1.6em;
-    height: 1.6em;
-  }
-  .accordion-panel.open {
-    padding: 10px 10px 12px 10px;
-  }
-  .accordion-table thead th,
-  .accordion-table tbody th,
-  .accordion-table td {
-    padding: 6px 6px;
-    font-size: 0.92rem;
-  }
+.partner-info {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 8px;
-  }
-  .page-header h1 {
-    font-size: 1.1rem;
-  }
-  .accordion-trigger {
-    font-size: 1.2rem;
-    padding: 8px 6px;
-  }
-  .accordion-trigger .right {
-    margin-right: 0.5rem;
-    padding: 0 6px 0 4px;
-    font-size: 0.9rem;
-  }
-  .accordion-trigger .flag {
-    width: 1.2em;
-    height: 1.2em;
-  }
-  .accordion-panel.open {
-    padding: 7px 6px 8px 6px;
-  }
-  .accordion-table {
-    font-size: 0.85rem;
-    min-width: 400px;
-  }
-  .accordion-table thead th,
-  .accordion-table tbody th,
-  .accordion-table td {
-    padding: 4px 4px;
-  }
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+.stat-item {
+  text-align: center;
 }
 
-.table-wrap {
-  overflow-x: auto;
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
 }
-.accordion-table {
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.partner-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 6px 0;
-  font-size: 0.98rem;
 }
-.accordion-table thead th {
-  font-weight: 700;
-  text-align: left;
-  padding: 8px 10px;
-  border-bottom: 1px solid #e6e6e6;
-}
-.accordion-table tbody th {
-  width: 28%;
-  padding: 8px 10px;
-  vertical-align: top;
-  color: #111;
+
+.partner-table th {
+  background: #000000;
+  color: #ffffff;
   font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-.accordion-table td {
-  padding: 8px 10px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
-  vertical-align: top;
-  color: #374151;
+
+.partner-table th:first-child {
+  border-radius: 4px 0 0 0;
 }
-.accordion-table tr:last-child td,
-.accordion-table tr:last-child th {
-  border-bottom: 0;
+
+.partner-table th:last-child {
+  border-radius: 0 4px 0 0;
+}
+
+.partner-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333333;
+  font-weight: 500;
+}
+
+.partner-table tr:last-child td {
+  border-bottom: none;
+}
+
+.partner-table tr:hover td {
+  background: #f8f8f8;
+}
+
+.partner-name {
+  font-weight: 600;
+  color: #000000;
+}
+
+.start-date {
+  font-family: "Inter", monospace;
+  color: #666666;
+  font-weight: 500;
+}
+
+.notes-tag {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .country-name {
+    font-size: 1.6rem;
+  }
+
+  .country-flag {
+    width: 150px;
+  }
+
+  .accordion-button {
+    padding: 20px 0;
+  }
+
+  .partner-table {
+    font-size: 0.9rem;
+  }
+
+  .partner-table th,
+  .partner-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .country-name {
+    font-size: 1.3rem;
+  }
+
+  .country-flag {
+    width: 120px;
+  }
+
+  .partner-table {
+    font-size: 0.8rem;
+  }
+
+  .partner-table th,
+  .partner-table td {
+    padding: 8px 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
