@@ -166,6 +166,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .footer-image {
+    display: none;
+  }
+}
+
 @media (max-width: 420px) {
   .footer-logo-lg {
     width: 92px;
@@ -178,6 +184,9 @@
     width: 40px;
     height: 40px;
     font-size: 13px;
+  }
+  .footer-image {
+    display: none;
   }
 }
 
