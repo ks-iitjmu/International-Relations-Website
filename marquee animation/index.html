@@ -8,44 +8,49 @@
   <body>
     <div class="flag-marquee-container">
       <div class="flag-marquee">
-        <span class="flags">
-          🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦
-          🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳
-        </span>
-        <span class="flags">
-          🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦
-          🇮🇳 🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳
-        </span>
+        <span class="flags"></span>
+        <span class="flags"></span>
       </div>
     </div>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
       .flag-marquee-container {
         width: 100vw;
-        min-height: 3.5rem;
         overflow: hidden;
-        background: #fff;
-        border-top: 2px solid #eee;
-        border-bottom: 2px solid #eee;
-        margin: 20px 0;
+        background: #0c458c;
         position: relative;
         z-index: 10;
         display: flex;
         align-items: center;
+        padding-bottom: 1rem;
       }
       .flag-marquee {
         display: flex;
         align-items: center;
         white-space: nowrap;
-        font-size: 2.2rem;
-        height: 3.5rem;
-        animation: marquee 45s linear infinite;
+        font-size: 4.8rem;
+        height: 6.5rem;
+        animation: marquee 700s linear infinite;
         will-change: transform;
       }
       .flags {
         display: inline-block;
         white-space: nowrap;
-        padding-right: 2rem;
+        padding-right: 4rem;
       }
+      .flag-marquee img {
+        height: 4.8rem;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0.6rem;
+        filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+      }
+
       @keyframes marquee {
         0% {
           transform: translateX(0);
@@ -56,7 +61,29 @@
       }
     </style>
     <script>
-      const flagSequence = "🇮🇹 🇧🇷 🇫🇷 🇺🇸 🇹🇼 🇳🇴 🇫🇮 🇬🇧 🇯🇵 🇩🇪 🇨🇦 🇮🇳 ";
+      const flagItems = [
+        { svg: "svg/italy.svg", name: "Italy" },
+        { svg: "svg/brazil.svg", name: "Brazil" },
+        { svg: "svg/france.svg", name: "France" },
+        { svg: "svg/us.svg", name: "United States" },
+        { svg: "svg/taiwan.svg", name: "Taiwan" },
+        { svg: "svg/norway.svg", name: "Norway" },
+        { svg: "svg/finland.svg", name: "Finland" },
+        { svg: "svg/england.svg", name: "United Kingdom" },
+        { svg: "svg/japan.svg", name: "Japan" },
+        { svg: "svg/germany.svg", name: "Germany" },
+        { svg: "svg/canada.svg", name: "Canada" },
+      ];
+
+      function makeFlagHtml(item) {
+        if (item.svg) {
+          return `<img src="${item.svg}" alt="${item.name || ""}" title="${
+            item.name || ""
+          }" loading="lazy"/>`;
+        }
+        return "";
+      }
+
       function fillFlags() {
         const marquee = document.querySelector(".flag-marquee");
         if (!marquee) return;
@@ -64,19 +91,21 @@
         spans.forEach((span) => {
           let repeated = "";
           const temp = document.createElement("span");
+          temp.className = "flags";
           temp.style.visibility = "hidden";
           temp.style.position = "absolute";
           temp.style.whiteSpace = "nowrap";
           document.body.appendChild(temp);
           let count = 0;
           while (true) {
-            temp.textContent = repeated + flagSequence;
+            let seqHtml = flagItems.map(makeFlagHtml).join(" ");
+            temp.innerHTML = repeated + seqHtml;
             if (temp.offsetWidth > window.innerWidth * 2) break;
-            repeated += flagSequence;
+            repeated += seqHtml + " ";
             count++;
             if (count > 100) break;
           }
-          span.textContent = repeated.trim();
+          span.innerHTML = repeated.trim();
           document.body.removeChild(temp);
         });
       }
