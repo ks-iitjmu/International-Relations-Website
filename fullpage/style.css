@@ -191,6 +191,18 @@
   pointer-events: auto;
 }
 
+.nav-item-kunal:last-child .nav-dropdown {
+  left: auto;
+  right: 0;
+  transform: translateX(0) translateY(10px);
+}
+
+.nav-item-kunal:last-child .nav-dropdown::before {
+  left: auto;
+  right: 18px;
+  transform: translateX(0) rotate(45deg);
+}
+
 .dropdown-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -491,7 +503,8 @@
 }
 
 .carousel {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: 100vh;
   margin-top: 0;
   overflow: hidden;
