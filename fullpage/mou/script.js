@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // Open accordion for country in hash (if present)
   if (window.location.hash) {
     const country = decodeURIComponent(window.location.hash.substring(1)).toLowerCase();
     for (const item of accordionItems) {

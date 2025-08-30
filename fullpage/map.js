@@ -1,19 +1,15 @@
 const highlightCountries = {
-  IT: { name: "Italy", url: "https://en.wikipedia.org/wiki/Italy" },
-  BR: { name: "Brazil", url: "https://en.wikipedia.org/wiki/Brazil" },
-  FR: { name: "France", url: "https://en.wikipedia.org/wiki/France" },
-  US: {
-    name: "United States",
-    url: "https://en.wikipedia.org/wiki/United_States",
-  },
-  TW: { name: "Taiwan", url: "https://en.wikipedia.org/wiki/Taiwan" },
-  NO: { name: "Norway", url: "https://en.wikipedia.org/wiki/Norway" },
-  FI: { name: "Finland", url: "https://en.wikipedia.org/wiki/Finland" },
-  GB: { name: "England", url: "https://en.wikipedia.org/wiki/England" },
-  JP: { name: "Japan", url: "https://en.wikipedia.org/wiki/Japan" },
-  DE: { name: "Germany", url: "https://en.wikipedia.org/wiki/Germany" },
-  CA: { name: "Canada", url: "https://en.wikipedia.org/wiki/Canada" },
-  IN: { name: "India", url: "https://en.wikipedia.org/wiki/India" },
+  IT: { name: "Italy", mou: "Italy" },
+  BR: { name: "Brazil", mou: "Brazil" },
+  FR: { name: "France", mou: "France" },
+  US: { name: "USA", mou: "USA" },
+  TW: { name: "Taiwan", mou: "Taiwan" },
+  NO: { name: "Norway", mou: "Norway" },
+  FI: { name: "Finland", mou: "Finland" },
+  GB: { name: "England", mou: "England" },
+  JP: { name: "Japan", mou: "Japan" },
+  DE: { name: "Germany", mou: "Germany" },
+  CA: { name: "Canada", mou: "Canada" },
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
     path.style.fill = "#9b9b9bff";
     path.style.transition = "fill 0.2s";
     path.style.cursor = "default";
-  });
 
   const tooltip = document.createElement("div");
   tooltip.style.position = "fixed";
@@ -39,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
   tooltip.style.display = "none";
   document.body.appendChild(tooltip);
 
-  Object.entries(highlightCountries).forEach(([id, { url, name }]) => {
+  Object.entries(highlightCountries).forEach(([id, { mou, name }]) => {
     const country =
       document.getElementById(id) ||
       svg.querySelector(`#${id}`) ||
@@ -65,8 +60,31 @@ window.addEventListener("DOMContentLoaded", () => {
       tooltip.style.top = e.clientY + 10 + "px";
     });
     country.addEventListener("click", () => {
-      window.open(url, "_blank");
+      window.location.href = `/fullpage/mou/index.html#${encodeURIComponent(mou)}`;
     });
+  });
+
+  const india = svg.querySelector("#IN") || document.getElementById("IN");
+  if (india) {
+    india.style.fill = "#0c458c";
+    india.style.cursor = "default";
+    india.addEventListener("mouseenter", () => {
+      india.style.fill = "#00acea";
+      tooltip.textContent = "India";
+      tooltip.style.display = "block";
+    });
+    india.addEventListener("mouseleave", () => {
+      india.style.fill = "#0c458c";
+      tooltip.style.display = "none";
+    });
+    india.addEventListener("mousemove", (e) => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY + 10 + "px";
+    });
+    india.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
   });
 
   let zoomLevel = 2.2;
