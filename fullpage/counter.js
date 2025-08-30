@@ -11,10 +11,10 @@ function animateCounters() {
         const timer = setInterval(() => {
             current += step;
             if (current >= target) {
-                counter.textContent = target;
+                counter.textContent = target + "+";
                 clearInterval(timer);
             } else {
-                counter.textContent = Math.floor(current);
+                counter.textContent = Math.floor(current) + "+";
             }
         }, 16);
     });
