@@ -1,38 +1,9 @@
-/**
- * =============================================================================
- * MOU PAGE JAVASCRIPT - International Relations Office
- * =============================================================================
- * 
- * JavaScript implementation of the MOU page featuring:
- * - Interactive accordion functionality 
- * - URL hash-based navigation for direct country access
- * - Responsive design optimizations
- * - Keyboard accessibility support
- * 
- * @author Kunal Sharma
- * @version 1.0.0
- * =============================================================================
- */
 
-/**
- * =============================================================================
- * MOU PAGE FUNCTIONALITY
- * =============================================================================
- */
-
-/**
- * State management
- */
 let activeAccordion = null;
 
-/**
- * Handle accordion toggle
- * @param {string} countryName - Name of the country to toggle
- */
 function handleAccordionToggle(countryName) {
     const wasActive = activeAccordion === countryName;
     
-    // Close all accordions first
     const allItems = document.querySelectorAll('.mou-accordion-item');
     allItems.forEach(item => {
         item.classList.remove('active');
@@ -46,7 +17,6 @@ function handleAccordionToggle(countryName) {
         chevron.style.transform = 'rotate(0deg)';
     });
 
-    // If it wasn't active, open the clicked one
     if (!wasActive) {
         activeAccordion = countryName;
         const targetItem = document.querySelector(`[data-country="${countryName}"]`);
@@ -66,11 +36,6 @@ function handleAccordionToggle(countryName) {
     }
 }
 
-/**
- * Handle keyboard navigation
- * @param {KeyboardEvent} event - Keyboard event
- * @param {string} countryName - Name of the country
- */
 function handleKeyDown(event, countryName) {
     if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
@@ -78,9 +43,6 @@ function handleKeyDown(event, countryName) {
     }
 }
 
-/**
- * Handle URL hash navigation
- */
 function handleHashNavigation() {
     if (window.location.hash) {
         const country = decodeURIComponent(window.location.hash.substring(1)).toLowerCase();
@@ -100,11 +62,7 @@ function handleHashNavigation() {
     }
 }
 
-/**
- * Initialize MOU page
- */
 function initializeMOUPage() {
-    // Add event listeners to all accordion buttons
     const accordionButtons = document.querySelectorAll('.mou-accordion-button');
     accordionButtons.forEach(button => {
         const countryName = button.getAttribute('data-country');
@@ -124,11 +82,5 @@ function initializeMOUPage() {
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashNavigation);
 }
-
-/**
- * =============================================================================
- * INITIALIZATION
- * =============================================================================
- */
 
 document.addEventListener('DOMContentLoaded', initializeMOUPage);

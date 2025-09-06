@@ -1,3 +1,5 @@
+```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +32,7 @@
   <header class="header-kunal">
     <div class="header-up-kunal">
       <div class="logo-section">
-        <a href="index.html"><img src="./image/image.png" alt="Institution Logo" class="header-image-kunal" /></a>
+        <img src="./image/image.png" alt="Institution Logo" class="header-image-kunal" />
       </div>
       <div class="header-title-section-kunal">
         <div class="header-title-kunal">
@@ -61,13 +63,13 @@
     <div class="header-down-kunal">
       <ul class="navbar-kunal">
         <li class="nav-item-kunal">
-          <a href="index.html" class="nav-link-kunal">Home</a>
+          <a href="./index.html" class="nav-link-kunal">Home</a>
         </li>
         <li class="nav-item-kunal">
           <a href="#" class="nav-link-kunal">About Us</a>
           <div class="nav-dropdown">
-            <a href="about.html" class="dropdown-item">Overview</a>
-            <a href="vision-mission.html" class="dropdown-item">Mission & Vision</a>
+            <a href="./about.html" class="dropdown-item">Overview</a>
+            <a href="./vision-mission.html" class="dropdown-item">Mission & Vision</a>
             <a href="./team.html" class="dropdown-item">Team</a>
           </div>
         </li>
@@ -211,99 +213,7 @@
 
 
 
-  <!-- overview section starts -->
-  <div class="overview-container">
-    <!-- Hero Section -->
-    <section class="overview-hero">
-      <!-- Top accent border -->
-      <div class="overview-hero-accent"></div>
-
-      <!-- Dots Pattern -->
-      <div class="overview-hero-pattern">
-        <div class="overview-hero-dots"></div>
-      </div>
-
-      <div class="overview-hero-container">
-        <div class="overview-hero-content">
-          <h1 class="overview-hero-title">
-            Overview
-          </h1>
-          <p class="overview-hero-subtitle">
-            Discover our commitment to global excellence and international collaboration
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Content Section -->
-    <section class="overview-content">
-      <div class="overview-content-container">
-        <div class="overview-grid">
-          <!-- Left Content Area - Overview Description -->
-          <div class="overview-text-section">
-            <div class="overview-card">
-              <div class="overview-card-content">
-                <div class="overview-header">
-                  <div class="overview-accent-bar"></div>
-                  <h2 class="overview-title">
-                    About Our Office
-                  </h2>
-                </div>
-
-                <div class="overview-text-content">
-                  <div>
-                    <p class="overview-description">
-                      The <strong>Office of International Relations</strong> at IIT Jammu is the institute's window to the world. It is dedicated to building bridges across borders by fostering academic, research, and cultural linkages with leading global universities, industries, and organizations. As IIT Jammu rapidly emerges as a hub of innovation and excellence, the Office of International Relations plays a central role in shaping its international footprint, <strong>facilitating student and faculty exchanges, enabling collaborative research, and hosting international scholars</strong> who bring diverse perspectives to our vibrant campus.
-                    </p>
-                  </div>
-
-                  <!-- Office Signature -->
-                  <div class="overview-signature">
-                    <div>
-                      <p class="overview-signature-name">
-                        Office of International Relations
-                      </p>
-                      <p class="overview-signature-tagline">
-                        Global Connections Driving Student Innovation
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Side - Featured Image -->
-          <div class="overview-image-section">
-            <div class="overview-image-wrapper">
-              <div class="overview-image-container">
-                <!-- Fallback Background -->
-                <div class="overview-image-fallback">
-                  🌏
-                </div>
-
-                <!-- Featured Image -->
-                <img
-                  src="./image/slider3.jpg"
-                  alt="IIT Jammu International Relations Overview"
-                  class="overview-featured-image"
-                />
-
-                <!-- Image Overlay -->
-                <div class="overview-image-overlay"></div>
-
-                <!-- Decorative Element -->
-                <div class="overview-decorative-element">
-                  <div class="overview-decorative-inner"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- overview section ends -->
+  <!-- footer starts -->
   <footer>
     <div class="footer-kunal">
       <img src="./image/foot.png" alt="footer image" class="footer-image-kunal" />
@@ -359,12 +269,8 @@
     </div>
   </footer>
   <!-- footer ends -->
-
-  <script src="./loader.js"></script>
-  <script src="./slider.js"></script>
-  <script src="./counter.js"></script>
-  <script src="./map.js"></script>
-  <script src="./flags.js"></script>
 </body>
 
 </html>
+
+```
