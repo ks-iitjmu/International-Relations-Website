@@ -1,20 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;700&display=swap');
 
-/* ===============================================================================
-   LOADING COMPONENT - International Relations Office
-   ===============================================================================
-   
-   A loading animation component featuring:
-   - IITJMU logo with clean container design
-   - Custom blue-themed gradient background pattern
-   - Responsive design
-   - Smooth fade-out animation when loading completes
-   
-   @author Kunal Sharma
-   @version 1.0.0
-   =============================================================================== */
-
 .loader-container {
   position: fixed;
   top: 0;
@@ -2657,5 +2643,303 @@ body {
   }
   .counter-number {
     font-size: 2rem;
+  }
+}
+
+.overview-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.overview-hero {
+  position: relative;
+  padding: 4rem 0 6rem 0;
+  overflow: hidden;
+  background-color: #0c458a;
+}
+
+.overview-hero-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.overview-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.overview-hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px);
+  background-size: 50px 50px;
+}
+
+.overview-hero-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.overview-hero-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.overview-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.overview-hero-subtitle {
+  font-size: 1.125rem;
+  color: #bfdbfe;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.overview-content {
+  padding: 2rem 0 3rem 0;
+  position: relative;
+}
+
+.overview-content-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.overview-text-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.overview-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.overview-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.overview-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.overview-accent-bar {
+  width: 0.5rem;
+  height: 2.5rem;
+  background-color: #0c458a;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+
+.overview-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c458a;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.overview-text-content {
+  padding-left: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overview-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+
+.overview-signature {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.overview-signature-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0c458a;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 0.25rem 0;
+}
+
+.overview-signature-tagline {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #0c458a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.overview-image-section {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 1.5rem;
+}
+
+.overview-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  height: 100%;
+}
+
+.overview-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background-color: #1e3a8a;
+  transition: transform 0.3s ease;
+}
+
+.overview-image-container:hover {
+  transform: scale(1.05);
+}
+
+.overview-image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4rem;
+  background-color: #1e3a8a;
+  z-index: 1;
+}
+
+.overview-featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.overview-image-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(30, 58, 138, 0.2);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.overview-decorative-element {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.overview-decorative-inner {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .overview-hero {
+    padding: 4rem 0 6rem 0;
+  }
+  
+  .overview-hero-title {
+    font-size: 3.75rem;
+  }
+  
+  .overview-hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .overview-content {
+    padding: 3rem 0 4rem 0;
+  }
+  
+  .overview-card {
+    padding: 2rem;
+  }
+  
+  .overview-title {
+    font-size: 1.5rem;
+  }
+  
+  .overview-description {
+    font-size: 1rem;
+  }
+  
+  .overview-image-container {
+    min-height: 31.25rem;
+  }
+  
+  .overview-image-section {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .overview-hero-title {
+    font-size: 4.5rem;
   }
 }
