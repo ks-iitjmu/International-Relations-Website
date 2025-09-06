@@ -118,11 +118,11 @@
           </div>
         </li>
         <li class="nav-item-kunal">
-          <a href="#" class="nav-link-kunal">Contact Us</a>
+          <a href="./contact.html" class="nav-link-kunal">Contact Us</a>
           <div class="nav-dropdown">
-            <a href="#" class="dropdown-item">Contact Details</a>
-            <a href="#" class="dropdown-item">General Query Form</a>
-            <a href="#" class="dropdown-item">FAQs</a>
+            <a href="./contact.html#contact-details" class="dropdown-item">Contact Details</a>
+            <a href="./contact.html#query-form" class="dropdown-item">General Query Form</a>
+            <a href="./contact.html#faqs" class="dropdown-item">FAQs</a>
           </div>
         </li>
       </ul>
@@ -199,18 +199,202 @@
         </ul>
       </li>
       <li>
-        <a href="#">Contact Us</a>
+        <a href="./contact.html">Contact Us</a>
         <ul class="side-panel-submenu">
-          <li><a href="#">Contact Details</a></li>
-          <li><a href="#">General Query Form</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="./contact.html#contact-details">Contact Details</a></li>
+          <li><a href="./contact.html#query-form">General Query Form</a></li>
+          <li><a href="./contact.html#faqs">FAQs</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <!-- header section ends -->
 
+  <!-- Team Hero Banner Section starts -->
+  <section class="team-hero">
+    <!-- Top accent border -->
+    <div class="team-hero-accent"></div>
 
+    <!-- Dots Pattern -->
+    <div class="team-hero-pattern">
+      <div class="team-hero-dots"></div>
+    </div>
+
+    <div class="team-hero-container">
+      <div class="team-hero-content">
+        <h1 class="team-hero-title">
+          Our Team
+        </h1>
+        <p class="team-hero-subtitle">
+          Meet the dedicated professionals driving international relations at IIT Jammu
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Team Hero Banner Section ends -->
+
+  <!-- Team Members Section starts -->
+  <section class="team-section">
+    <div class="team-container">
+      <!-- Current Leadership Row -->
+      <div class="team-row">
+        <h3 class="team-row-title">Current Leadership</h3>
+        <div class="team-cards-grid current-leadership">
+          <!-- Team Member 1 - Dean International Relations -->
+          <div class="team-card">
+            <div class="team-card-inner">
+              <div class="team-photo-container">
+                <img src="./image/dean.jpg" alt="Dean International Relations" class="team-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Jayaramulu Kolleboyina</h3>
+                <p class="team-designation">Dean of International Relations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 - Associate Dean International Relations -->
+          <div class="team-card">
+            <div class="team-card-inner">
+              <div class="team-photo-container">
+                <img src="./image/adean.jpg" alt="Associate Dean International Relations" class="team-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Angshuman Kapil</h3>
+                <p class="team-designation">Associate Dean of International Relations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 - Assistant Registrar -->
+          <div class="team-card">
+            <div class="team-card-inner">
+              <div class="team-photo-container">
+                <img src="./image/" alt="Assistant Registrar" class="team-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Saurabh Mahajan</h3>
+                <p class="team-designation">Assistant Registrar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Former Deans Button -->
+      <div class="former-deans-section">
+        <button class="former-deans-btn" onclick="openFormerDeansModal()">
+          <span class="btn-text">Click to Know Former Deans</span>
+          <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Team Officers Row -->
+      <div class="team-row">
+        <h3 class="team-row-title">Student Members</h3>
+        <div class="team-cards-grid student-members">
+          <!-- Student Member 1 - Website -->
+          <div class="team-card">
+            <div class="team-card-inner">
+              <div class="team-photo-container">
+                <img src="./image/kunal.jpg" alt="Website Developer" class="team-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Kunal Sharma</h3>
+                <p class="team-designation">Student Member</p>
+                <p class="team-department">Website Development</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Member 2 - Social Media -->
+          <div class="team-card">
+            <div class="team-card-inner">
+              <div class="team-photo-container">
+                <img src="./image/ak.png" alt="Social Media Manager" class="team-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Aakanksha Garg</h3>
+                <p class="team-designation">Student Member</p>
+                <p class="team-department">Social Media & Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Former Deans Modal -->
+    <div id="formerDeansModal" class="modal-overlay" onclick="closeFormerDeansModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+          <h2 class="modal-title">Former Deans of International Relations</h2>
+          <button class="modal-close" onclick="closeFormerDeansModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="former-dean-list">
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) John Smith</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2020 - 2024</span>
+            </div>
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) Sarah Johnson</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2016 - 2020</span>
+            </div>
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) Michael Brown</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2012 - 2016</span>
+            </div>
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) Emily Davis</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2008 - 2012</span>
+            </div>
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) Robert Wilson</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2004 - 2008</span>
+            </div>
+            <div class="former-dean-item">
+              <a href="#" class="former-dean-link" target="_blank">
+                <span class="dean-name">Prof. (Dr.) Lisa Anderson</span>
+                <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+              </a>
+              <span class="dean-tenure">2000 - 2004</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Team Members Section ends -->
 
   <!-- footer starts -->
   <footer>
@@ -232,10 +416,9 @@
             Jagti, NH-44, PO Nagrota<br />
             Jammu - 181221 J&K, India
           </p>
-          <!-- <p class="muted-kunal">
-            Phone: (+91) 191-257-0381<br />
-            Email: info@iitjammu.ac.in
-          </p> -->
+          <p class="muted-kunal">
+            Email: international.office@iitjammu.ac.in
+          </p>
         </div>
 
         <div class="col-kunal">
@@ -269,6 +452,7 @@
   </footer>
   <!-- footer ends -->
    <script src="./loader.js"></script>
+   <script src="./team.js"></script>
 </body>
 
 </html>

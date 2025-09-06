@@ -1396,6 +1396,675 @@ html {
   }
 }
 
+/* Team Hero Banner Section */
+.team-hero {
+  position: relative;
+  padding: 4rem 0 6rem 0;
+  overflow: hidden;
+  background-color: #0c458a;
+}
+
+.team-hero-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.team-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.team-hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px);
+  background-size: 50px 50px;
+}
+
+.team-hero-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.team-hero-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.team-hero-subtitle {
+  font-size: 1.125rem;
+  color: #bfdbfe;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Team Members Section */
+.team-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+}
+
+.team-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(30, 58, 138, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(30, 58, 138, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0c458a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.1),
+    0 10px 20px -8px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(30, 58, 138, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #0c458a 50%, #1e3a8a 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 35px 70px -12px rgba(0, 0, 0, 0.15),
+    0 15px 30px -8px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(30, 58, 138, 0.1);
+}
+
+.team-card:hover::before {
+  transform: scaleX(1);
+}
+
+.team-card-inner {
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-photo-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  padding: 4px;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.team-info {
+  position: relative;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.team-card:hover .team-name {
+  color: #0c458a;
+}
+
+.team-designation {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0c458a;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.team-designation::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #0c458a 100%);
+  transition: width 0.4s ease;
+}
+
+.team-card:hover .team-designation::after {
+  width: 60px;
+}
+
+.team-department {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Team Rows Layout */
+.team-row {
+  margin-bottom: 4rem;
+}
+
+.team-row-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.team-row-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #0c458a 100%);
+  border-radius: 2px;
+}
+
+.current-leadership {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.student-members {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.team-officers {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Former Deans Section */
+.former-deans-section {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.former-deans-btn {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0c458a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.former-deans-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.former-deans-btn:hover::before {
+  left: 100%;
+}
+
+.former-deans-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.4);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.former-deans-btn:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  max-width: 1200px;
+  width: 98%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0c458a 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 3rem;
+}
+
+.former-dean-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.former-dean-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.former-dean-item:hover {
+  background: #e3f2fd;
+  border-color: #1e3a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+}
+
+.former-dean-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.former-dean-link:hover {
+  color: #0c458a;
+}
+
+.dean-name {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.link-icon {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.former-dean-link:hover .link-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.dean-tenure {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 500;
+  background: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Medium Screen Responsive Design */
+@media (max-width: 1024px) {
+  .current-leadership {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .former-dean-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Responsive Design for Team Section */
+@media (max-width: 768px) {
+  .team-hero {
+    padding: 3rem 0 4rem 0;
+  }
+  
+  .team-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .team-section {
+    padding: 3rem 0;
+  }
+  
+  .team-container {
+    padding: 0 1rem;
+  }
+  
+  .team-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .team-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .current-leadership {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .student-members {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .team-officers {
+    grid-template-columns: 1fr;
+  }
+
+  .former-dean-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .team-row-title {
+    font-size: 1.5rem;
+  }
+
+  .former-deans-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .former-dean-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .dean-name {
+    font-size: 1rem;
+  }
+  
+  .team-card-inner {
+    padding: 1.5rem;
+  }
+  
+  .team-photo-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-name {
+    font-size: 1.3rem;
+  }
+  
+  .team-designation {
+    font-size: 1rem;
+  }
+  
+  .team-department {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-hero {
+    padding: 2rem 0 3rem 0;
+  }
+  
+  .team-hero-title {
+    font-size: 2rem;
+  }
+  
+  .team-hero-subtitle {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .team-section {
+    padding: 2rem 0;
+  }
+
+  .team-row {
+    margin-bottom: 3rem;
+  }
+
+  .team-row-title {
+    font-size: 1.3rem;
+  }
+
+  .former-deans-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .team-cards-grid {
+    gap: 1rem;
+  }
+  
+  .team-card-inner {
+    padding: 1rem;
+  }
+  
+  .team-photo-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .team-name {
+    font-size: 1.2rem;
+  }
+  
+  .team-designation {
+    font-size: 0.95rem;
+  }
+  
+  .team-department {
+    font-size: 0.85rem;
+  }
+}
+
 .footer-kunal {
   background: #0c458a;
   position: relative;
