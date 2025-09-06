@@ -82,6 +82,96 @@
   }
 }
 
+/* Mobile Layout Reset - Remove all unwanted margins and ensure full width */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  section, div, header, footer {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure specific sections are full width */
+  .header-kunal,
+  .slider-container,
+  .director-message-section,
+  .map-container,
+  .flag-marquee-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Fix content containers */
+  .director-message-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .slider-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Ensure header doesn't cause horizontal scroll */
+  .header-up-kunal {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Ensure map and counters are properly centered */
+  .map-counters-flex {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Prevent horizontal overflow */
+  .map, .counter {
+    max-width: 100% !important;
+  }
+  
+  .flag-marquee {
+    max-width: none !important;
+    animation: marquee 700s linear infinite !important;
+  }
+}
+
+/* Extra mobile fixes for very small screens */
+@media (max-width: 480px) {
+  .director-message-container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  .slider-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .header-up-kunal {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Ensure counters take full width on small screens */
+  .counter {
+    width: calc(100% - 1rem) !important;
+    max-width: 300px !important;
+  }
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
   .loader-logo {
@@ -111,6 +201,10 @@ body.loading {
 
 body {
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -118,6 +212,11 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Nata Sans", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* header */
@@ -1041,7 +1140,8 @@ body {
 
   .director-image-wrapper {
     max-width: 250px;
-    height: 280px;
+    height: auto;
+    min-height: 300px;
     margin: 0 auto;
   }
 }
@@ -1073,7 +1173,8 @@ body {
 
   .director-image-wrapper {
     max-width: 220px;
-    height: 250px;
+    height: auto;
+    min-height: 280px;
   }
 }
 
@@ -1082,8 +1183,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #0c458c;
+  padding: 2rem 1rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .map-title-kunal {
@@ -1110,12 +1215,12 @@ body {
 
 .map {
   max-width: 800px;
-  margin: 48px auto;
+  margin: 2rem auto;
   border-radius: 18px;
   border: solid 4px #00aeca;
   box-shadow: 0 2px 16px 0 rgba(60, 120, 180, 0.1);
-  width: 90vw;
-  min-width: 320px;
+  width: 100%;
+  min-width: 280px;
   min-height: 320px;
   display: flex;
   align-items: center;
@@ -1145,11 +1250,18 @@ body {
 }
 
 @media (max-width: 600px) {
+  .map-container {
+    padding: 1rem 0;
+    min-height: 90vh;
+  }
+  
   .map {
     padding: 6px;
     border-radius: 10px;
-    margin: 24px auto;
+    margin: 1.5rem 0;
     min-height: 280px;
+    width: 100%;
+    max-width: 95vw;
   }
 
   .map svg {
@@ -1160,7 +1272,7 @@ body {
 /* Enhanced Map Responsive Styles */
 @media (max-width: 1024px) {
   .map-container {
-    height: 90vh;
+    min-height: 90vh;
     padding: 2rem 1rem;
   }
 
@@ -1176,14 +1288,14 @@ body {
 
   .map {
     max-width: 700px;
-    margin: 32px auto;
+    margin: 2rem auto;
   }
 }
 
 @media (max-width: 768px) {
   .map-container {
-    height: 80vh;
-    padding: 1.5rem 1rem;
+    min-height: 80vh;
+    padding: 1.5rem 0.5rem;
   }
 
   .map-title-kunal {
@@ -1199,8 +1311,8 @@ body {
   }
 
   .map {
-    max-width: 600px;
-    margin: 24px auto;
+    max-width: 100%;
+    margin: 1.5rem 0;
     border: solid 3px #00aeca;
   }
 
@@ -1211,8 +1323,8 @@ body {
 
 @media (max-width: 480px) {
   .map-container {
-    height: 70vh;
-    padding: 1rem 0.5rem;
+    min-height: 70vh;
+    padding: 1rem 0;
   }
 
   .map-title-kunal {
@@ -1224,13 +1336,13 @@ body {
   .map-subtitle-kunal {
     font-size: 1rem;
     margin-bottom: 1rem;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     line-height: 1.4;
   }
 
   .map {
-    max-width: 95vw;
-    margin: 16px auto;
+    max-width: 100%;
+    margin: 1rem 0;
     min-height: 240px;
     border: solid 2px #00aeca;
   }
@@ -1432,7 +1544,9 @@ body {
   z-index: 10;
   display: flex;
   align-items: center;
-  padding-bottom: 3rem;
+  padding: 2rem 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .flag-marquee {
@@ -1458,6 +1572,44 @@ body {
   vertical-align: middle;
   margin: 0 0.6rem;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 768px) {
+  .flag-marquee-container {
+    padding: 1.5rem 0;
+  }
+  
+  .flag-marquee {
+    font-size: 3.5rem;
+    height: 5rem;
+    animation: marquee 700s linear infinite;
+  }
+  
+  .flag-marquee img {
+    height: 3.5rem;
+    margin: 0 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flag-marquee-container {
+    padding: 1rem 0;
+  }
+  
+  .flag-marquee {
+    font-size: 2.8rem;
+    height: 4rem;
+    animation: marquee 700s linear infinite;
+  }
+  
+  .flag-marquee img {
+    height: 2.8rem;
+    margin: 0 0.3rem;
+  }
+  
+  .flags {
+    padding-right: 2rem;
+  }
 }
 
 @keyframes marquee {
@@ -2281,7 +2433,8 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding: 20px 15px;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .header h1 {
@@ -2616,8 +2769,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .map-counters {
@@ -2670,24 +2826,53 @@ body {
   .map-counters-flex {
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0 1rem;
   }
   .map-counters {
+    display: flex;
     flex-direction: row;
     gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .counter {
+    flex: 1;
+    max-width: 150px;
   }
 }
 
 @media (max-width: 600px) {
+  .map-counters-flex {
+    padding: 0 0.5rem;
+  }
   .map-counters {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
   }
   .counter {
-    min-width: 90px;
-    padding: 1.2rem 0.7rem;
+    min-width: 100%;
+    max-width: 300px;
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+  }
+  .counter-number {
+    font-size: 2.2rem;
+  }
+  .counter-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter {
+    padding: 1.2rem 0.8rem;
   }
   .counter-number {
     font-size: 2rem;
+  }
+  .counter-label {
+    font-size: 0.85rem;
   }
 }
 
@@ -3000,11 +3185,15 @@ body {
   overflow: hidden;
   background-color: #0c458a;
   min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
   .vision-hero-section {
     padding: 6rem 0;
+    min-height: 45vh;
   }
 }
 
@@ -3035,6 +3224,10 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 640px) {
@@ -3051,7 +3244,7 @@ body {
 
 .vision-hero-content {
   text-align: center;
-  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .vision-hero-title {
@@ -3127,7 +3320,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: stretch;
+  align-items: start;
   min-height: 600px;
 }
 
@@ -3136,6 +3329,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     min-height: 700px;
+    align-items: stretch;
   }
 }
 
@@ -3147,20 +3341,40 @@ body {
   height: 100%;
 }
 
+/* Vision Card - Balanced space */
+.vision-card:first-child {
+  flex: 0.35;
+  min-height: 200px;
+}
+
+/* Mission Card - Balanced space */
+.vision-card:last-child {
+  flex: 0.65;
+  min-height: 420px;
+}
+
 .vision-card {
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
   border: 1px solid #f3f4f6;
-  flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 @media (min-width: 1024px) {
   .vision-card {
     padding: 2rem;
+  }
+  
+  .vision-card:first-child {
+    min-height: 220px;
+  }
+  
+  .vision-card:last-child {
+    min-height: 460px;
   }
 }
 
@@ -3169,6 +3383,8 @@ body {
   flex-direction: column;
   gap: 1rem;
   flex: 1;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .vision-card-header {
@@ -3203,18 +3419,16 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .vision-statement {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #374151;
-  line-height: 1.75;
+  line-height: 1.5;
   text-align: justify;
   font-weight: 500;
   margin: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -3434,6 +3648,56 @@ body {
   
   .vision-hero-image-container {
     min-height: 350px;
+  }
+}
+
+/* Mobile Responsive Improvements for Vision Mission Page */
+@media (max-width: 768px) {
+  .vision-hero-section {
+    min-height: 35vh;
+    padding: 3rem 0;
+  }
+  
+  .vision-hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vision-hero-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .vision-card:first-child {
+    flex: 1;
+    min-height: auto;
+  }
+  
+  .vision-card:last-child {
+    flex: 1;
+    min-height: auto;
+  }
+  
+  .vision-card {
+    min-height: auto;
+    box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .vision-card-content {
+    min-height: 250px;
+  }
+  
+  .vision-statement,
+  .mission-point-description {
+    text-align: left;
+  }
+  
+  .mission-point-title {
+    font-size: 1rem;
+  }
+  
+  .mission-point-description {
+    font-size: 0.85rem;
   }
 }
 
