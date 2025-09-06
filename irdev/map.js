@@ -63,28 +63,6 @@ window.addEventListener("DOMContentLoaded", () => {
       window.location.href = `./mou.html#${encodeURIComponent(mou)}`;
     });
   });
-
-  const india = svg.querySelector("#IN") || document.getElementById("IN");
-  if (india) {
-    india.style.fill = "#0c458c";
-    india.style.cursor = "default";
-    india.addEventListener("mouseenter", () => {
-      india.style.fill = "#00acea";
-      tooltip.textContent = "India";
-      tooltip.style.display = "block";
-    });
-    india.addEventListener("mouseleave", () => {
-      india.style.fill = "#0c458c";
-      tooltip.style.display = "none";
-    });
-    india.addEventListener("mousemove", (e) => {
-      tooltip.style.left = e.clientX + 15 + "px";
-      tooltip.style.top = e.clientY + 10 + "px";
-    });
-    india.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
-  }
   });
 
   let zoomLevel = 2.2;
