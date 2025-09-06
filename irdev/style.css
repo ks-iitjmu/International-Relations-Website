@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 .loader-container {
   position: fixed;
@@ -868,6 +869,8 @@ html {
 }
 
 .text-overlay h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
   font-size: 4rem;
   font-weight: bolder;
   margin-bottom: 1rem;
@@ -1192,9 +1195,9 @@ html {
 }
 
 .map-title-kunal {
-  font-family: "Poppins", "Nata Sans", sans-serif;
-  font-size: 4rem;
+  font-family: "Libre Baskerville", serif;
   font-weight: 700;
+  font-size: 4rem;
   color: #33acfd;
   margin-bottom: 0.5rem;
   text-align: center;
