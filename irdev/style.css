@@ -250,29 +250,6 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  background: #90caf97c;
-  border: 1px solid #90caf9;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.social-link-kunal:hover {
-  background: #e3f2fd;
-  border-color: #90caf9;
-}
-
-.social-linkedin-kunal {
-  color: #0a66c2;
-}
-
-.social-instagram-kunal {
-  color: #e1306c;
-}
-
-.social-facebook-kunal {
-  color: #1877f2;
 }
 
 .header-down-kunal {
