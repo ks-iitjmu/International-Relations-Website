@@ -5765,18 +5765,21 @@ html {
   position: relative;
   z-index: 2;
   background: white;
-  padding: 1.5rem;
+  padding: 0.2rem;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 120px;
+  height: 120px;
 }
 
 .fest-logo img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .fest-content {
@@ -5929,12 +5932,16 @@ html {
   }
   
   .fest-logo {
-    padding: 1rem;
+    padding: 0.15rem;
+    width: 100px;
+    height: 100px;
   }
   
   .fest-logo img {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   .fest-content {
@@ -5964,9 +5971,17 @@ html {
     height: 150px;
   }
   
+  .fest-logo {
+    width: 80px;
+    height: 80px;
+    padding: 0.1rem;
+  }
+  
   .fest-logo img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   .fest-content {
