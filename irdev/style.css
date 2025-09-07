@@ -4925,6 +4925,16 @@ html {
   position: relative;
 }
 
+/* Dots Pattern for Form Section */
+.contact-form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
 .form-section-header {
   text-align: center;
   margin-bottom: 3rem;
