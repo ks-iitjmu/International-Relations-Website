@@ -15,7 +15,6 @@ function closeFormerDeansModal() {
   }
 }
 
-// Close modal on Escape key
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     closeFormerDeansModal();

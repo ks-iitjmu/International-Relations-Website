@@ -5841,8 +5841,8 @@ html {
   transform: scale(1.1);
 }
 
-/* Modal Styles */
-.modal {
+/* Image Modal Styles */
+.image-modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -5854,7 +5854,7 @@ html {
   animation: fadeIn 0.3s ease;
 }
 
-.modal-content {
+.image-modal-content {
   position: relative;
   margin: auto;
   padding: 0;
@@ -5865,13 +5865,13 @@ html {
   animation: slideIn 0.3s ease;
 }
 
-.modal-content img {
+.image-modal-content img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.close-modal {
+.close-image-modal {
   position: absolute;
   top: -50px;
   right: 0;
@@ -5882,7 +5882,7 @@ html {
   transition: color 0.3s ease;
 }
 
-.close-modal:hover {
+.close-image-modal:hover {
   color: #1877f2;
 }
 
@@ -6002,11 +6002,11 @@ html {
     height: 250px;
   }
   
-  .modal-content {
+  .image-modal-content {
     width: 95%;
   }
   
-  .close-modal {
+  .close-image-modal {
     top: -40px;
     font-size: 30px;
   }
@@ -6099,5 +6099,15 @@ html {
   
   .social-links {
     justify-content: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .hide-ak {
+    display: none;
+  }
+  .student-members {
+    grid-template-columns: 1fr;
+    max-width: 400px;
   }
 }
