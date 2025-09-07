@@ -2068,6 +2068,278 @@ html {
   }
 }
 
+/* Sports Page Specific Styles */
+.section-description {
+  font-size: 1.1rem;
+  color: #64748b;
+  text-align: center;
+  margin: 1rem auto 3rem auto;
+  max-width: 60rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sports Card Styles with Empty Image Placeholders */
+.sports-fests .team-card,
+.sports-clubs .team-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.sports-fests .team-card:hover,
+.sports-clubs .team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(12, 69, 138, 0.15);
+  border-color: #0c458a;
+}
+
+.sports-fests .team-card-inner,
+.sports-clubs .team-card-inner {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sports-fests .team-photo-container,
+.sports-clubs .team-photo-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sports-fests .team-photo-container::before,
+.sports-clubs .team-photo-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(12, 69, 138, 0.3);
+  border-radius: 50%;
+  border-top-color: #0c458a;
+  opacity: 0.5;
+}
+
+.sports-fests .team-photo,
+.sports-clubs .team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.sports-fests .team-card:hover .team-photo,
+.sports-clubs .team-card:hover .team-photo {
+  transform: scale(1.05);
+}
+
+.sports-fests .team-info,
+.sports-clubs .team-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sports-fests .team-name,
+.sports-clubs .team-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0c458a;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.sports-fests .team-designation,
+.sports-clubs .team-designation {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fest-description,
+.club-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-top: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sports-fests {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sports-clubs {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.facility-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.facility-item:hover {
+  background: #f8fafc;
+  border-color: #0c458a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(12, 69, 138, 0.1);
+}
+
+.facility-item h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0c458a;
+  margin-bottom: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.facility-item p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tablet responsive design for Sports Fests */
+@media (max-width: 992px) {
+  .sports-fests {
+    max-width: 600px;
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive Design for Sports Page */
+@media (max-width: 768px) {
+  .section-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .sports-fests,
+  .sports-clubs {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .sports-fests .team-photo-container,
+  .sports-clubs .team-photo-container {
+    height: 180px;
+  }
+  
+  .sports-fests .team-info,
+  .sports-clubs .team-info {
+    padding: 1.2rem;
+  }
+  
+  .sports-fests .team-name,
+  .sports-clubs .team-name {
+    font-size: 1.2rem;
+  }
+  
+  .sports-fests .team-designation,
+  .sports-clubs .team-designation {
+    font-size: 0.9rem;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .facility-item {
+    padding: 1.5rem;
+  }
+  
+  .facility-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .facility-item p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-description {
+    font-size: 0.95rem;
+  }
+  
+  .sports-fests .team-photo-container,
+  .sports-clubs .team-photo-container {
+    height: 160px;
+  }
+  
+  .sports-fests .team-info,
+  .sports-clubs .team-info {
+    padding: 1rem;
+  }
+  
+  .sports-fests .team-name,
+  .sports-clubs .team-name {
+    font-size: 1.1rem;
+  }
+  
+  .sports-fests .team-designation,
+  .sports-clubs .team-designation {
+    font-size: 0.85rem;
+  }
+  
+  .fest-description,
+  .club-description {
+    font-size: 0.9rem;
+  }
+  
+  .facility-item {
+    padding: 1.2rem;
+  }
+  
+  .facility-item h4 {
+    font-size: 1rem;
+  }
+  
+  .facility-item p {
+    font-size: 0.9rem;
+  }
+}
+
 .footer-kunal {
   background: #0c458a;
   position: relative;
