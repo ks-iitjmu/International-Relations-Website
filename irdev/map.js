@@ -6,7 +6,6 @@ const highlightCountries = {
   TW: { name: "Taiwan", mou: "Taiwan" },
   NO: { name: "Norway", mou: "Norway" },
   FI: { name: "Finland", mou: "Finland" },
-  GB: { name: "England", mou: "England" },
   JP: { name: "Japan", mou: "Japan" },
   DE: { name: "Germany", mou: "Germany" },
   CA: { name: "Canada", mou: "Canada" },
