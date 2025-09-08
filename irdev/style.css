@@ -3084,7 +3084,6 @@ html {
   max-width: 800px;
   height: 0;
   padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
   background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
@@ -3827,7 +3826,6 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
   margin-bottom: 2rem;
   width: 100%;
   max-width: 1200px;
