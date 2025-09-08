@@ -119,9 +119,9 @@
         <li class="nav-item-kunal">
           <a href="#" class="nav-link-kunal">Contact Us</a>
           <div class="nav-dropdown">
-            <a href="./contact.html#contact-details" class="dropdown-item">Contact Details</a>
-            <a href="./contact.html#query-form" class="dropdown-item">General Query Form</a>
-            <a href="./contact.html#faqs" class="dropdown-item">FAQs</a>
+            <a href="./contact.html" class="dropdown-item">Contact Details</a>
+            <a href="./contact-form.html" class="dropdown-item">General Query Form</a>
+            <a href="./contact-faq.html" class="dropdown-item">FAQs</a>
           </div>
         </li>
       </ul>
@@ -200,9 +200,9 @@
       <li>
         <a href="#">Contact Us</a>
         <ul class="side-panel-submenu">
-          <li><a href="./contact.html#contact-details">Contact Details</a></li>
-          <li><a href="./contact.html#query-form">General Query Form</a></li>
-          <li><a href="./contact.html#faqs">FAQs</a></li>
+          <li><a href="./contact.html">Contact Details</a></li>
+          <li><a href="./contact-form.html">General Query Form</a></li>
+          <li><a href="./contact-faq.html">FAQs</a></li>
         </ul>
       </li>
     </ul>
@@ -351,205 +351,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="query-form" class="contact-form-section">
-      <div class="contact-content-container">
-        <div class="form-section-header">
-          <div class="contact-accent-bar"></div>
-          <h2 class="contact-title">Send Us a Message</h2>
-          <p class="contact-subtitle">Have a question or need assistance? Fill out the form below and we'll get back to
-            you soon.</p>
-        </div>
-
-        <div class="contact-form-container">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="affiliation">Affiliation *</label>
-              <select id="affiliation" name="affiliation" required>
-                <option value="">Select your affiliation</option>
-                <option value="current-student">Current IIT Jammu Student</option>
-                <option value="prospective-student">Prospective Student</option>
-                <option value="faculty">Faculty/Staff</option>
-                <option value="partner-institution">Partner Institution</option>
-                <option value="parent">Parent/Guardian</option>
-                <option value="alumni">Alumni</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="inquiry-type">Type of Inquiry *</label>
-              <select id="inquiry-type" name="inquiryType" required>
-                <option value="">Select inquiry type</option>
-                <option value="student-exchange">Student Exchange Programs</option>
-                <option value="dual-degree">Dual Degree Programs</option>
-                <option value="research-collaboration">Research Collaboration</option>
-                <option value="partnership">Institutional Partnership</option>
-                <option value="visiting-scholar">Visiting Scholar Program</option>
-                <option value="international-admissions">International Admissions</option>
-                <option value="visa-immigration">Visa & Immigration Support</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" placeholder="Brief subject of your inquiry" required>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="6" placeholder="Please provide details about your inquiry..."
-                required></textarea>
-            </div>
-
-            <div class="form-group checkbox-group">
-              <label class="checkbox-label">
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <span class="checkmark"></span>
-                I would like to receive updates about international programs and opportunities
-              </label>
-            </div>
-
-            <div class="form-group checkbox-group">
-              <label class="checkbox-label">
-                <input type="checkbox" id="privacy" name="privacy" required>
-                <span class="checkmark"></span>
-                I agree to the <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of
-                  Service</a> *
-              </label>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faqs" class="faq-section">
-      <div class="contact-content-container">
-        <div class="faq-header">
-          <div class="contact-accent-bar"></div>
-          <h2 class="contact-title">Frequently Asked Questions</h2>
-          <p class="contact-subtitle">Find quick answers to common questions about our international programs and
-            services.</p>
-        </div>
-
-        <div class="faq-container">
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>How can I apply for international exchange programs?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, aut eos! Vero culpa quos fugiat enim
-                iste pariatur esse architecto?</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>What support is available for international students?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos velit dolor autem pariatur enim quia
-                minus sit blanditiis porro id.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>Are there dual degree programs available?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae dicta necessitatibus sunt? Dolore error
-                aut culpa perferendis fugit enim eveniet!.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>How do I establish a partnership with IIT Jammu?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eligendi culpa, obcaecati vitae
-                recusandae doloremque quidem blanditiis nihil impedit voluptates!</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>What is the process for visiting scholars and researchers?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum officiis reprehenderit repellendus
-                exercitationem voluptate odit doloremque fuga eius dicta non?</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>What documents are required for international admissions?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam ipsum laboriosam distinctio minima
-                sunt itaque, accusamus quis obcaecati deserunt alias.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>Is financial aid available for international students?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ducimus rem beatae perferendis, eligendi
-                sint consequuntur laudantium magni odio expedita.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <h3>How long does the visa process take?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo animi fuga quidem asperiores provident
-                perferendis tenetur magni numquam suscipit debitis?</p>
             </div>
           </div>
         </div>
