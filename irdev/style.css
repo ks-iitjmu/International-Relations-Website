@@ -6147,3 +6147,204 @@ html {
     max-width: 400px;
   }
 }
+
+/* Student Opportunities Section */
+.opportunities-section {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.opportunities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Toggle Slider */
+.opportunity-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.toggle-container {
+  position: relative;
+  background: #e2e8f0;
+  border-radius: 50px;
+  padding: 4px;
+  display: flex;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 46px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  min-width: 140px;
+}
+
+.toggle-btn.active {
+  color: #ffffff;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: #1e3a8a;
+  border-radius: 46px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+}
+
+.toggle-container[data-active="inbound"] .toggle-slider {
+  transform: translateX(100%);
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.opportunities-grid.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.opportunities-grid.fade-out {
+  opacity: 0;
+}
+
+.opportunities-grid.fade-in {
+  opacity: 1;
+}
+
+.opportunity-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(30, 58, 138, 0.08),
+    0 0 0 1px rgba(30, 58, 138, 0.1);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.opportunity-card:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-8px);
+  box-shadow: 
+    0 24px 48px rgba(0, 0, 0, 0.15),
+    0 12px 24px rgba(30, 58, 138, 0.12),
+    0 0 0 2px #1e3a8a;
+  border-color: #1e3a8a;
+}
+
+.opportunity-icon {
+  width: 120px;
+  height: 120px;
+  background: #1e3a8a;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.3);
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover .opportunity-icon {
+  background: #0c458a;
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(30, 58, 138, 0.4);
+}
+
+.opportunity-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 0;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover .opportunity-title {
+  color: #0c458a;
+}
+
+.opportunity-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover .opportunity-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+  color: #0c458a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .opportunity-card {
+    padding: 1.5rem;
+  }
+  
+  .opportunity-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+  }
+  
+  .opportunity-title {
+    font-size: 1rem;
+  }
+  
+  .toggle-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+  
+  .opportunity-toggle {
+    margin-bottom: 2rem;
+  }
+}

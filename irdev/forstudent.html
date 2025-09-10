@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>IIT Jammu - Office of International Relations</title>
+</head>
+
+<body class="loading">
+    <!-- Loading Animation -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+
+            <!-- Logo Container -->
+            <div class="loader-logo-container">
+                <img src="./image/iitjmu.svg" alt="IIT Jammu Logo" class="loader-logo" />
+            </div>
+
+            <!-- Loading Bar -->
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loading Animation ends -->
+
+    <!-- header section starts -->
+    <header class="header-kunal">
+        <div class="header-up-kunal">
+            <div class="logo-section">
+                <img src="./image/image.png" alt="Institution Logo" class="header-image-kunal" />
+            </div>
+            <div class="header-title-section-kunal">
+                <div class="header-title-kunal">
+                    Office of International Relations
+                </div>
+                <div class="header-subtitle-kunal">
+                    <em>Global Connections Driving Student Innovation</em>
+                </div>
+            </div>
+            <div class="socials-kunal">
+                <a href="https://www.facebook.com/IITJammuOfficial/" class="social-link-kunal" title="Facebook"
+                    target="_blank">
+                    <img src="./svg/facebook.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/iit.jammu/" class="social-link-kunal" title="Instagram"
+                    target="_blank">
+                    <img src="./svg/instagram.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/iitjammu/" class="social-link-kunal" title="LinkedIn"
+                    target="_blank">
+                    <img src="./svg/linkedin.svg" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCeJu6ap8blsd57khwy3RsqQ" class="social-link-kunal"
+                    title="YouTube" target="_blank">
+                    <img src="./svg/youtube.svg" alt="">
+                </a>
+                <a href="https://x.com/IITJammu" class="social-link-kunal" title="X" target="_blank">
+                    <img src="./svg/x.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="header-down-kunal">
+            <ul class="navbar-kunal">
+                <li class="nav-item-kunal">
+                    <a href="./index.html" class="nav-link-kunal">Home</a>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">About Us</a>
+                    <div class="nav-dropdown">
+                        <a href="./about.html" class="dropdown-item">Overview</a>
+                        <a href="./vision-mission.html" class="dropdown-item">Mission & Vision</a>
+                        <a href="./team.html" class="dropdown-item">Team</a>
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">Collaborations</a>
+                    <div class="nav-dropdown">
+                        <a href="./mou.html" class="dropdown-item">MoUs</a>
+                        <a href="#" class="dropdown-item">Global Networks</a>
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">Opportunities</a>
+                    <div class="nav-dropdown">
+                        <a href="./forstudent.html" class="dropdown-item">For Students</a>
+                        <a href="#" class="dropdown-item">For Faculty</a>
+
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">Campus Life</a>
+                    <div class="nav-dropdown">
+                        <a href="./clubs.html" class="dropdown-item">Student Clubs</a>
+                        <a href="./fests.html" class="dropdown-item">Student Fests</a>
+                        <a href="./sports.html" class="dropdown-item">Sports & Recreation</a>
+                        <a href="./events.html" class="dropdown-item">Cultural Events</a>
+                        <a href="./life.html" class="dropdown-item">Residential Life</a>
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">News</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="dropdown-item">Campus News</a>
+                        <a href="#" class="dropdown-item">Press Releases</a>
+                        <a href="#" class="dropdown-item">Achievements</a>
+                        <a href="#" class="dropdown-item">Media Coverage</a>
+                        <a href="#" class="dropdown-item">Newsletter</a>
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">Downloads</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="dropdown-item">Brochures</a>
+                        <a href="#" class="dropdown-item">Application Forms</a>
+                        <a href="#" class="dropdown-item">Academic Calendar</a>
+                        <a href="#" class="dropdown-item">Policies & Guidelines</a>
+                        <a href="#" class="dropdown-item">Student Handbook</a>
+                    </div>
+                </li>
+                <li class="nav-item-kunal">
+                    <a href="#" class="nav-link-kunal">Contact Us</a>
+                    <div class="nav-dropdown">
+                        <a href="./contact.html" class="dropdown-item">Contact Details</a>
+                        <a href="./contact-form.html" class="dropdown-item">General Query Form</a>
+                        <a href="./contact-faq.html" class="dropdown-item">FAQs</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-kunal" onclick="toggleSidePanel()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" onclick="closeSidePanel()"></div>
+
+    <div class="side-panel">
+        <div class="side-panel-header">
+            <h3>Navigation Menu</h3>
+            <button class="close-panel" onclick="closeSidePanel()">×</button>
+        </div>
+        <ul class="side-panel-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">About Us</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="about.html">Overview</a></li>
+                    <li><a href="vision-mission.html">Mission & Vision</a></li>
+                    <li><a href="./team.html">Team</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Collaborations</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="./mou.html">MoUs</a></li>
+                    <li><a href="#">Global Networks</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Opportunities</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="./forstudent.html">For Students</a></li>
+                    <li><a href="#">For Faculty</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">Campus Life</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="./clubs.html">Student Clubs</a></li>
+                    <li><a href="./fests.html">Student Fests</a></li>
+                    <li><a href="./sports.html">Sports & Recreation</a></li>
+                    <li><a href="./events.html">Cultural Events</a></li>
+                    <li><a href="./life.html">Residential Life</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">News</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="#">Campus News</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Media Coverage</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Downloads</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="#">Brochures</a></li>
+                    <li><a href="#">Application Forms</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Policies & Guidelines</a></li>
+                    <li><a href="#">Student Handbook</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+                <ul class="side-panel-submenu">
+                    <li><a href="./contact.html">Contact Details</a></li>
+                    <li><a href="./contact-form.html">General Query Form</a></li>
+                    <li><a href="./contact-faq.html">FAQs</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- header section ends -->
+
+    <!-- Student Opportunities Hero Banner Section starts -->
+    <section class="team-hero">
+        <!-- Top accent border -->
+        <div class="team-hero-accent"></div>
+
+        <!-- Dots Pattern -->
+        <div class="team-hero-pattern">
+            <div class="team-hero-dots"></div>
+        </div>
+
+        <div class="team-hero-container">
+            <div class="team-hero-content">
+                <h1 class="team-hero-title">
+                    Student Opportunities
+                </h1>
+                <p class="team-hero-subtitle">
+                    Discover global opportunities for academic exchange, research collaboration, internships, and international experiences at IIT Jammu
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Student Opportunities Hero Banner Section ends -->
+
+    <!-- Student Opportunities Content Section starts -->
+    <section class="opportunities-section">
+        <div class="opportunities-container">
+            
+            <!-- Toggle Slider -->
+            <div class="opportunity-toggle">
+                <div class="toggle-container">
+                    <button class="toggle-btn active" data-type="outbound">Outbound Students</button>
+                    <button class="toggle-btn" data-type="inbound">Inbound Students</button>
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+
+            <!-- Outbound Opportunities -->
+            <div class="opportunities-grid" id="outbound-opportunities">
+                
+                <a href="https://www.daad.de/en/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">DAAD</div>
+                    <h3 class="opportunity-title">German Academic Exchange Service</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.fulbright.org.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">USIEF</div>
+                    <h3 class="opportunity-title">United States India Educational Foundation</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.chevening.org/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">CHEVENING</div>
+                    <h3 class="opportunity-title">Chevening Scholarships</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">ERASMUS+</div>
+                    <h3 class="opportunity-title">European Union Exchange Programme</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.mitacs.ca/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">MITACS</div>
+                    <h3 class="opportunity-title">Mathematics of Information Technology and Complex Systems</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.jasso.go.jp/en/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">JASSO</div>
+                    <h3 class="opportunity-title">Japan Student Services Organization</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.csc.edu.cn/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">CSC</div>
+                    <h3 class="opportunity-title">China Scholarship Council</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.iie.org/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">IIE</div>
+                    <h3 class="opportunity-title">Institute of International Education</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+            </div>
+
+            <!-- Inbound Opportunities -->
+            <div class="opportunities-grid hidden" id="inbound-opportunities">
+                
+                <a href="https://www.study-in-india.gov.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">SII</div>
+                    <h3 class="opportunity-title">Study in India Programme</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.iccr.gov.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">ICCR</div>
+                    <h3 class="opportunity-title">Indian Council for Cultural Relations</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.aicte-india.org/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">AICTE</div>
+                    <h3 class="opportunity-title">All India Council for Technical Education</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://mea.gov.in/itec.htm" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">ITEC</div>
+                    <h3 class="opportunity-title">Indian Technical and Economic Cooperation</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.ugc.ac.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">UGC</div>
+                    <h3 class="opportunity-title">University Grants Commission</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.dst.gov.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">DST</div>
+                    <h3 class="opportunity-title">Department of Science and Technology</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.csir.res.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">CSIR</div>
+                    <h3 class="opportunity-title">Council of Scientific and Industrial Research</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+                <a href="https://www.isro.gov.in/" target="_blank" class="opportunity-card">
+                    <div class="opportunity-icon">ISRO</div>
+                    <h3 class="opportunity-title">Indian Space Research Organisation</h3>
+                    <div class="opportunity-arrow">→</div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Student Opportunities Content Section ends -->
+
+    <!-- footer starts -->
+    <footer>
+        <div class="footer-kunal">
+            <img src="./image/foot.png" alt="footer image" class="footer-image-kunal" />
+        </div>
+        <div class="main-footer-kunal">
+            <div class="container-kunal">
+                <div class="col-kunal">
+                    <span class="logo-badge-kunal">
+                        <img src="./image/iitjmu.svg" alt="IIT Jammu Logo" class="footer-logo-lg-kunal" />
+                    </span>
+                </div>
+
+                <div class="col-kunal">
+                    <h4 class="footer-title-kunal">ADDRESS</h4>
+                    <p style="color: #97b8de">
+                        Indian Institute of Technology Jammu<br />
+                        Jagti, NH-44, PO Nagrota<br />
+                        Jammu - 181221 J&K, India
+                    </p>
+                    <p class="muted-kunal">
+                        Phone: +91-191-2570-699<br />
+                        Email: international.office@iitjammu.ac.in
+                    </p>
+                </div>
+
+                <div class="col-kunal">
+                    <h4 class="footer-title-kunal">PROGRAMS</h4>
+                    <ul>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/ug-admissions"
+                                target="_blank">Undergraduate</a>
+                        </li>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/pg-admissions"
+                                target="_blank">Postgraduate</a>
+                        </li>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/phd" target="_blank">Phd &
+                                Research</a></li>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/post/advt-joint-phd-august-20256-26"
+                                target="_blank">Joint Phd Programs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-kunal">
+                    <h4 class="footer-title-kunal">CONTACT US</h4>
+                    <ul>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/ug-admissions"
+                                target="_blank">Admissions</a>
+                        </li>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/welcome-contacts"
+                                target="_blank">General
+                                Enquiries</a></li>
+                        <li><a class="link-kunal" href="https://maps.app.goo.gl/BJMuLy5acH1e3WWA9" target="_blank">Visit
+                                Campus</a>
+                        </li>
+                        <li><a class="link-kunal" href="https://www.iitjammu.ac.in/faq-main-website"
+                                target="_blank">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-legal-kunal">
+                <p>
+                    &copy; 2025 Indian Institute of Technology Jammu. All rights
+                    reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+
+    <script src="./nav.js"></script>
+    <script src="./loader.js"></script>
+    <script src="./opportunities.js"></script>
+</body>
+
+</html>
