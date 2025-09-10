@@ -375,7 +375,7 @@ html {
   left: 50%;
   width: 0;
   height: 3px;
-  background: #0c458a;
+  background: #9fcaff;
   transition: all 0.3s ease;
   transform: translateX(-50%);
   border-radius: 2px 2px 0 0;
@@ -387,12 +387,12 @@ html {
 
 .nav-link-kunal:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #0c458a;
+  color: #9fcaff;
 }
 
 /* Change arrow color on hover */
 .nav-item-kunal:not(:first-child) .nav-link-kunal:hover::after {
-  color: #0c458a;
+  color: #9fcaff;
 }
 
 .nav-dropdown {
@@ -1198,7 +1198,7 @@ html {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-size: 4rem;
-  color: #0c458a;
+  color: #9fcaff;
   margin-bottom: 0.5rem;
   text-align: center;
   letter-spacing: 0.5px;
@@ -1209,7 +1209,7 @@ html {
   font-family: "Poppins", "Nata Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #0c458a;
+  color: #ffffff;
   margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.2px;
